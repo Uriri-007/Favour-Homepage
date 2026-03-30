@@ -18,25 +18,45 @@ export const Navbar = () => {
   const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
+    let ticking = false;
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-      
-      // Update active section based on scroll position
-      const sections = navItems.map(item => item.href.substring(1));
-      for (const section of sections) {
-        const element = document.getElementById(section);
-        if (element) {
-          const rect = element.getBoundingClientRect();
-          if (rect.top >= 0 && rect.top <= 300) {
-            setActiveSection(section);
-            break;
-          }
-        }
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setIsScrolled(window.scrollY > 20);
+          ticking = false;
+        });
+        ticking = true;
       }
     };
     
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    // Use IntersectionObserver for active section tracking - much more performant
+    const observerOptions = {
+      root: null,
+      rootMargin: "-20% 0px -70% 0px", // Adjust to trigger when section is in view
+      threshold: 0,
+    };
+
+    const observerCallback = (entries: IntersectionObserverEntry[]) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+    
+    navItems.forEach((item) => {
+      const element = document.getElementById(item.href.substring(1));
+      if (element) observer.observe(element);
+    });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      observer.disconnect();
+    };
   }, []);
 
   return (

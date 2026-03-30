@@ -16,7 +16,7 @@ import { CommandPalette } from "./components/CommandPalette";
 
 export default function App() {
   return (
-    <main className="relative min-h-screen text-white selection:bg-blue-500/30 selection:text-white">
+    <main className="relative min-h-screen text-white selection:bg-blue-500/30 selection:text-white overflow-x-hidden">
       <Background />
       <Navbar />
       <CommandPalette />
@@ -32,7 +32,7 @@ export default function App() {
       </div>
 
       {/* Custom Cursor or other global elements can go here */}
-      <div className="fixed inset-0 pointer-events-none z-[100] border-[1px] border-white/5 m-4 rounded-[2rem]" />
+      <div className="fixed inset-0 pointer-events-none z-[100] border-[1px] border-white/5 m-2 sm:m-4 rounded-[1.5rem] sm:rounded-[2rem]" />
     </main>
   );
 }

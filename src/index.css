@@ -3,15 +3,19 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
   
   body {
-    @apply bg-black text-white antialiased;
+    @apply bg-black text-white antialiased overflow-x-hidden w-full;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
-  /* Custom scrollbar */
+  /* Custom scrollbar - optimized */
   ::-webkit-scrollbar {
-    width: 8px;
+    width: 6px;
   }
   ::-webkit-scrollbar-track {
     @apply bg-black;

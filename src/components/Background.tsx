@@ -7,18 +7,19 @@ export const Background = () => {
       <div className="absolute top-[-10%] left-[-10%] h-[40%] w-[40%] rounded-full bg-blue-900/20 blur-[120px]" />
       <div className="absolute bottom-[-10%] right-[-10%] h-[40%] w-[40%] rounded-full bg-purple-900/20 blur-[120px]" />
       
-      {/* Animated mesh-like glow */}
+      {/* Animated mesh-like glow - optimized */}
       <motion.div
         animate={{
-          scale: [1, 1.2, 1],
-          opacity: [0.3, 0.5, 0.3],
+          scale: [1, 1.1, 1],
+          opacity: [0.2, 0.4, 0.2],
         }}
         transition={{
-          duration: 10,
+          duration: 12,
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="absolute top-1/4 left-1/3 h-[500px] w-[500px] rounded-full bg-blue-500/5 blur-[100px]"
+        style={{ willChange: "transform, opacity" }}
+        className="absolute top-1/4 left-1/3 h-[400px] w-[400px] sm:h-[500px] sm:w-[500px] rounded-full bg-blue-500/5 blur-[100px]"
       />
       
       {/* Grid pattern overlay */}

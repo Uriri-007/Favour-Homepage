@@ -6,31 +6,31 @@ const projects = [
     title: "Exaverse",
     description: "Led community engagement and growth strategies for a high-stakes metaverse ecosystem.",
     tags: ["Community Management", "Growth", "Metaverse"],
-    image: "https://picsum.photos/seed/exaverse/800/600",
+    image: "../assets/images/exaverse.jpg",
   },
   {
     title: "Drift Derby",
     description: "Executed social media campaigns and user retention strategies for a Web3 racing game.",
     tags: ["Social Media", "Gaming", "Retention"],
-    image: "https://picsum.photos/seed/drift/800/600",
+    image: "../assets/images/drift_derby.jpg",
   },
   {
     title: "Dazzle Games",
     description: "Managed community relations and organic growth for a multi-game Web3 platform.",
     tags: ["Community", "Strategy", "P2E"],
-    image: "https://picsum.photos/seed/dazzle/800/600",
+    image: "../assets/images/dazzle.jpg",
   },
   {
     title: "Conquest.eth",
     description: "Strategic growth and ecosystem expansion for a decentralized conquest game.",
     tags: ["Ecosystem", "Growth", "DeFi"],
-    image: "https://picsum.photos/seed/conquest/800/600",
+    image: "../assets/images/conq_eth.jpg",
   },
   {
     title: "SpyreIO",
     description: "Social media management and community building for a Web3 infrastructure project.",
     tags: ["Infrastructure", "Social Media", "B2B"],
-    image: "https://picsum.photos/seed/spyre/800/600",
+    image: "../assets/images/spyreio.jpg",
   },
 ];
 

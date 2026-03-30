@@ -88,7 +88,7 @@ export const About = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-600/20 rounded-3xl blur-3xl animate-pulse" />
             <div className="relative h-full w-full rounded-3xl border border-white/10 bg-white/5 backdrop-blur-sm p-8 flex flex-col items-center justify-center text-center">
               <img
-              className="w-32 h-32 rounded-md object-cover mb-6 shadow-2xl shadow-blue-500/20 border-2 border-white ring-1 ring-slate-100"
+              className="w-40 h-40 rounded-md object-cover mb-6 shadow-2xl shadow-blue-500/20 border-2 border-white ring-1 ring-slate-100"
               src="/images/hero.jpg"
               alt="Favour's avatar"
               />

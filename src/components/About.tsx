@@ -50,10 +50,10 @@ export const About = () => {
               A Results-Driven <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">Web3 Strategist</span>
             </h2>
             <p className="text-lg text-gray-400 mb-6 leading-relaxed">
-              I am a results-driven Web3 strategist with over 3 years of experience in community management, social media growth, and user engagement. I have contributed to projects such as Exaverse, Drift Derby, Dazzle Games, Conquest.eth, and SpyreIO.
+              With over 3 years of experience in community management, social media growth, and user engagement—I have contributed to projects such as Exaverse, Drift Derby, Dazzle Games, Conquest.eth, and SpyreIO.
             </p>
             <p className="text-lg text-gray-400 mb-10 leading-relaxed">
-              I specialize in building engaged communities, executing social media strategies, and driving organic growth. I am detail-oriented, adaptable, and deeply invested in continuous learning within the Web3 ecosystem.
+              Known for building engaged communities, executing social media strategies, and driving organic growth. I am detail-oriented, adaptable, and deeply invested in continuous learning within the Web3 ecosystem.
             </p>
 
             <div className="grid grid-cols-2 gap-6">
